@@ -706,15 +706,9 @@
         
         // Listen for auth state changes and update navigation buttons
         onAuthStateChanged(auth, (user) => {
-            console.log('Firebase onAuthStateChanged fired');
-            console.log('User object:', user);
-            console.log('User is null?', user === null);
-            console.log('User is undefined?', user === undefined);
-            console.log('!!user:', !!user);
             
             // Explicitly check if user exists - user will be null if not authenticated
             const isAuthenticated = user !== null && user !== undefined;
-            console.log('isAuthenticated:', isAuthenticated);
             
             const updateButtons = () => {
                 if (typeof window.updateNavigationButtons === 'function') {

@@ -282,14 +282,9 @@ let globalAuthState = false;
 // Update login buttons based on Firebase auth state
 // This function is called by Firebase's onAuthStateChanged listener
 function updateLoginButtons(isAuthenticated) {
-    console.log('updateLoginButtons called. isAuthenticated:', isAuthenticated);
-    console.log('Type of isAuthenticated:', typeof isAuthenticated);
-    console.log('Value:', isAuthenticated);
-    
     // Ensure we have a boolean value - default to false (not authenticated) if unclear
     const authenticated = Boolean(isAuthenticated);
     globalAuthState = authenticated;
-    console.log('Final authenticated value:', authenticated);
     
     // Keep Sign In button text always as "Sign In"
     const signInBtn = document.getElementById('signin-btn');
@@ -399,9 +394,6 @@ function initAuthListener() {
             // Check current user - this may be null if auth hasn't restored state yet
             // but onAuthStateChanged will update it when ready
             const currentUser = auth.currentUser;
-            console.log('initAuthListener - currentUser:', currentUser);
-            console.log('initAuthListener - currentUser is null?', currentUser === null);
-            console.log('initAuthListener - !!currentUser:', !!currentUser);
             
             // Default to false (not authenticated) if user is null or undefined
             isAuthenticated = currentUser !== null && currentUser !== undefined;
@@ -409,7 +401,6 @@ function initAuthListener() {
             // If Firebase says not authenticated, check cookie as fallback
             if (!isAuthenticated) {
                 isAuthenticated = checkAuthCookie();
-                console.log('initAuthListener - Auth cookie check:', isAuthenticated);
             }
             
             updateLoginButtons(isAuthenticated);
@@ -417,7 +408,6 @@ function initAuthListener() {
         }
         
         // If Firebase not available, check cookie
-        console.log('Firebase not available yet, checking cookie');
         isAuthenticated = checkAuthCookie();
         updateLoginButtons(isAuthenticated);
         
