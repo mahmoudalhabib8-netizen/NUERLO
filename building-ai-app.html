@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Your First AI Application: Step-by-Step Guide</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how to build your first AI application step-by-step. Guide to choosing technology stacks, defining project scope, implementation strategies, and avoiding common mistakes.">
+    <meta name="keywords" content="build AI application, AI app development, how to build AI app, AI development guide, machine learning app, AI programming tutorial, first AI app">
+    <meta name="author" content="Nuerlo">
+    <link rel="canonical" href="https://nuerlo.com/building-ai-app.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nuerlo.com/building-ai-app.html">
+    <meta property="og:title" content="Building Your First AI Application: Step-by-Step Guide">
+    <meta property="og:description" content="Learn how to build your first AI application step-by-step. Guide to choosing technology stacks, defining project scope, and implementation strategies.">
+    <meta property="og:image" content="https://nuerlo.com/assets/images/BUILDING0-YOUR-FIRST-AI-APPLICATION.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nuerlo.com/building-ai-app.html">
+    <meta property="twitter:title" content="Building Your First AI Application: Step-by-Step Guide">
+    <meta property="twitter:description" content="Learn how to build your first AI application step-by-step. Guide to choosing technology stacks, defining project scope, and implementation strategies.">
+    <meta property="twitter:image" content="https://nuerlo.com/assets/images/BUILDING0-YOUR-FIRST-AI-APPLICATION.png">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .blog-section-title {
+            scroll-margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="blog-page">
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/blog.html" class="active">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="blog-post-content">
+            <!-- Date with Calendar Icon -->
+            <div class="blog-post-date">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>January 8, 2025</span>
+            </div>
+            
+            <!-- Main Header -->
+            <h1 class="blog-post-title">Building Your First AI Application</h1>
+            
+            <!-- Sub Header -->
+            <p class="blog-post-subtitle">A practical guide to creating intelligent applications from concept to deployment</p>
+            
+            <!-- Author Profile -->
+            <div class="blog-post-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <p class="author-name">Mahmoud Alhabib</p>
+                    <p class="author-role">Chief Executive Officer</p>
+                </div>
+            </div>
+            
+            <!-- Blog Content -->
+            <div class="blog-post-body">
+                <!-- Table of Contents -->
+                <div class="table-of-contents" style="margin-bottom: 48px;">
+                    <h3 style="font-size: 24px; font-weight: 600; color: #ffffff; margin: 0 0 24px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Table of contents</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="#getting-started" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Getting Started with AI Development</a></li>
+                        <li><a href="#project-scope" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Defining Your Project Scope</a></li>
+                        <li><a href="#technology-stack" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Choosing the Right Technology Stack</a></li>
+                        <li><a href="#development-implementation" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Development and Implementation</a></li>
+                        <li><a href="#deployment-scaling" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Deployment and Scaling</a></li>
+                        <li><a href="#best-practices" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Best Practices and Lessons Learned</a></li>
+                        <li><a href="#common-mistakes" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Common Mistakes to Avoid</a></li>
+                        <li><a href="#resources-learning" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Resources for Learning</a></li>
+                        <li><a href="#conclusion" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Conclusion</a></li>
+                    </ul>
+                </div>
+                <style>
+                    .table-of-contents a:hover {
+                        color: #b0b0b0 !important;
+                    }
+                </style>
+                <script>
+                    // Smooth scroll for table of contents links
+                    document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+                    });
+                </script>
+                
+                <h2 class="blog-section-title" id="getting-started">Getting Started with AI Development</h2>
+                <p class="blog-text">
+                    Building your first AI application can seem daunting, but with the right approach and tools, it's more accessible than ever. The key is starting with a clear problem to solve and choosing the right AI technology for your use case. Whether you're building a recommendation system, a chatbot, or an image recognition app, the fundamental principles remain the same.
+                </p>
+                <p class="blog-text">
+                    Modern AI development has been democratized by cloud platforms, pre-trained models, and comprehensive frameworks. You don't need a PhD in machine learning to build useful AI applications. What you need is understanding of the problem, knowledge of available tools, and willingness to iterate and learn. This guide will walk you through the essential steps.
+                </p>
+                
+                <h2 class="blog-section-title" id="project-scope">Defining Your Project Scope</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=600&fit=crop" alt="Planning AI application development" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    Before writing any code, clearly define what you want to build and why. Start with a specific problem that AI can solve effectively.
+                </p>
+                <p class="blog-text">
+                    <strong>Scope definition checklist:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Start with a simple, achievable use case that provides real value</li>
+                    <li>Avoid overly ambitious projects for your first application</li>
+                    <li>Research existing solutions to understand what's possible</li>
+                    <li>Identify gaps your application can fill</li>
+                    <li>Define success metrics early—how will you measure success?</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Key considerations:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li><strong>User experience:</strong> How will users interact with your AI?</li>
+                    <li><strong>Accuracy requirements:</strong> What level of accuracy is acceptable?</li>
+                    <li><strong>Performance expectations:</strong> Response time and scalability needs</li>
+                    <li><strong>Data requirements:</strong> Do you have access to clean, labeled data?</li>
+                    <li><strong>Model approach:</strong> Pre-trained models vs. custom training</li>
+                </ul>
+                <p class="blog-text">
+                    For many first projects, using pre-trained models or publicly available datasets is the most practical approach. A well-defined scope prevents feature creep and keeps development focused.
+                </p>
+                
+                <h2 class="blog-section-title" id="technology-stack">Choosing the Right Technology Stack</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=600&fit=crop" alt="AI technology stack" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    The AI technology landscape offers numerous options, each suited to different use cases.
+                </p>
+                <p class="blog-text">
+                    <strong>By use case:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li><strong>Natural Language Processing:</strong> Transformer models and language APIs</li>
+                    <li><strong>Computer Vision:</strong> Image recognition models and vision APIs</li>
+                    <li><strong>Recommendations:</strong> Collaborative filtering and content-based approaches</li>
+                    <li><strong>Predictive Analytics:</strong> Machine learning frameworks and cloud services</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Cloud AI Services (Best for beginners):</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Handle model training, optimization, and scaling automatically</li>
+                    <li>No deep machine learning expertise required</li>
+                    <li>Focus on application logic and user experience</li>
+                    <li>Ideal for getting started quickly</li>
+                    <li>Easy to scale as your application grows</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Open-Source Frameworks (More control):</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>TensorFlow, PyTorch, and scikit-learn</li>
+                    <li>More control and flexibility</li>
+                    <li>Require more technical knowledge</li>
+                    <li>Greater customization options</li>
+                    <li>Choose based on your technical comfort level</li>
+                </ul>
+                
+                <h2 class="blog-section-title" id="development-implementation">Development and Implementation</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=600&fit=crop" alt="AI application development process" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    Start with a minimal viable product (MVP) that demonstrates core functionality. Build a simple version that works end-to-end before adding complexity.
+                </p>
+                <p class="blog-text">
+                    <strong>MVP approach benefits:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Validates your concept early</li>
+                    <li>Identifies technical challenges before they become blockers</li>
+                    <li>Gets user feedback quickly</li>
+                    <li>Allows for iterative improvement</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Essential implementation elements:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li><strong>Error handling:</strong> AI models can be unpredictable—handle failures gracefully</li>
+                    <li><strong>User feedback:</strong> Clear communication about what's happening</li>
+                    <li><strong>Edge cases:</strong> Provide meaningful error messages and recovery options</li>
+                    <li><strong>User correction:</strong> Ways for users to correct mistakes or provide feedback</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Testing strategy:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Test with diverse inputs and edge cases</li>
+                    <li>Use real-world scenarios for validation</li>
+                    <li>Monitor model performance and track accuracy metrics</li>
+                    <li>Implement logging and monitoring from the start</li>
+                    <li>Continuously improve based on usage data</li>
+                </ul>
+                
+                <h2 class="blog-section-title" id="deployment-scaling">Deployment and Scaling</h2>
+                <p class="blog-text">
+                    Deploying AI applications requires consideration of latency, scalability, and cost. Cloud platforms offer managed services that handle infrastructure concerns, allowing you to focus on application features. Consider serverless options for applications with variable traffic patterns.
+                </p>
+                <p class="blog-text">
+                    Model versioning and updates are important for maintaining and improving your application. Implement a system for deploying new model versions, A/B testing different approaches, and rolling back if issues arise. Monitor model performance in production and retrain or update as needed.
+                </p>
+                
+                <h2 class="blog-section-title" id="best-practices">Best Practices and Lessons Learned</h2>
+                <p class="blog-text">
+                    Start simple and iterate. Your first AI application doesn't need to be perfect—it needs to work and provide value. Learn from each project, gather feedback, and continuously improve. Many successful AI applications started as simple prototypes that evolved based on real-world usage.
+                </p>
+                <p class="blog-text">
+                    Focus on user experience. The best AI technology is useless if users can't interact with it effectively. Design intuitive interfaces, provide clear feedback, and make it easy for users to understand what the AI is doing and why. Good UX often matters more than perfect accuracy.
+                </p>
+                <p class="blog-text">
+                    Stay current with AI developments, but don't chase every new trend. Focus on technologies that solve your specific problems. Build a solid foundation with proven tools, then explore new capabilities as they become relevant to your use cases. The AI field moves fast, but fundamentals remain important.
+                </p>
+                
+                <h2 class="blog-section-title" id="common-mistakes">Common Mistakes to Avoid</h2>
+                <p class="blog-text">
+                    Learning from common mistakes can save you time and frustration. Here are the most frequent pitfalls to avoid:
+                </p>
+                <p class="blog-text">
+                    <strong>Mistake #1: Starting too complex</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Beginners often try to build sophisticated systems before mastering basics</li>
+                    <li><strong>Solution:</strong> Start simple, get something working, then add complexity incrementally</li>
+                    <li>Each iteration teaches valuable lessons and builds confidence</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Mistake #2: Neglecting user experience</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>The most advanced AI is useless if users can't interact with it effectively</li>
+                    <li><strong>Solution:</strong> Always prioritize usability and clear communication</li>
+                    <li>Users need to understand what your application does and how to use it</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Mistake #3: Ignoring data quality</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>AI models are only as good as the data they're trained on</li>
+                    <li><strong>Solution:</strong> Invest time in data collection, cleaning, and preparation</li>
+                    <li>Poor data leads to poor results, regardless of model sophistication</li>
+                </ul>
+                
+                <h2 class="blog-section-title" id="resources-learning">Resources for Learning</h2>
+                <p class="blog-text">
+                    The AI development community is incredibly supportive, with numerous resources available for learning. Online courses, documentation, tutorials, and forums provide pathways for developers at all levels. Take advantage of these resources to build your skills systematically.
+                </p>
+                <p class="blog-text">
+                    Hands-on practice is essential. Reading about AI development is helpful, but building actual applications teaches lessons that can't be learned from theory alone. Start with small projects, complete them end-to-end, and learn from both successes and failures.
+                </p>
+                
+                <h2 class="blog-section-title" id="conclusion">Conclusion</h2>
+                <p class="blog-text">
+                    Building your first AI application is an achievable goal with the right approach and tools. The technology has matured to the point where developers can create powerful AI applications without needing deep machine learning expertise. Start with a clear problem, choose appropriate tools, and iterate based on feedback.
+                </p>
+                <p class="blog-text">
+                    Remember that every expert was once a beginner. Your first AI application doesn't need to be perfect—it needs to work and provide value. Learn from each project, stay curious, and keep building. The applications you create today are the foundation for the innovations you'll build tomorrow. The future of AI development is in your hands—start building it today.
+                </p>
+                
+                <div class="blog-post-signature">
+                    <p class="signature-name">Mahmoud Alhabib</p>
+                    <p class="signature-role">Chief Executive Officer</p>
+                    <p class="signature-company">Nuerlo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Latest Insights Section -->
+    <div class="latest-insights-section">
+        <div class="latest-insights-container">
+            <h2 class="latest-insights-header">Latest Insights</h2>
+            <div class="latest-insights-grid">
+                <a href="/ai-in-business.html" class="latest-insight-card">
+                    <div class="latest-insight-image">
+                        <img src="/assets/images/THE-FUTURE-OF-AI-IN-BUSINESS" alt="The Future of AI in Business" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="latest-insight-content">
+                        <h3 class="latest-insight-title">The Future of AI in Business</h3>
+                        <p class="latest-insight-date">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            November 13, 2025
+                        </p>
+                        <span class="blog-card-link">
+                            Read more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+                
+                <a href="/ai-chatbots.html" class="latest-insight-card">
+                    <div class="latest-insight-image">
+                        <img src="/assets/images/MASTERING-AI-CHATBOTS.png" alt="Mastering AI Chatbots" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="latest-insight-content">
+                        <h3 class="latest-insight-title">Mastering AI Chatbots</h3>
+                        <p class="latest-insight-date">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            January 12, 2025
+                        </p>
+                        <span class="blog-card-link">
+                            Read more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/index.html#careers">Careers</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="/index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/user-agreement.html">User Agreement</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html#cookies">Cookie Policy</a></li>
+                        <li><a href="/fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>
+
+
+
+
+

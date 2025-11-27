@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering AI Chatbots: Complete Guide</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete guide to AI chatbots: key components, implementation strategies, best practices, and future trends. Learn how to build effective chatbots that enhance customer service and business operations.">
+    <meta name="keywords" content="AI chatbots, chatbot development, AI customer service, chatbot implementation, conversational AI, chatbot strategy, AI assistant, customer service automation">
+    <meta name="author" content="Nuerlo">
+    <link rel="canonical" href="https://nuerlo.com/ai-chatbots.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nuerlo.com/ai-chatbots.html">
+    <meta property="og:title" content="Mastering AI Chatbots: Complete Guide">
+    <meta property="og:description" content="Complete guide to AI chatbots: key components, implementation strategies, best practices, and future trends.">
+    <meta property="og:image" content="https://nuerlo.com/assets/images/MASTERING-AI-CHATBOTS.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nuerlo.com/ai-chatbots.html">
+    <meta property="twitter:title" content="Mastering AI Chatbots: Complete Guide">
+    <meta property="twitter:description" content="Complete guide to AI chatbots: key components, implementation strategies, best practices, and future trends.">
+    <meta property="twitter:image" content="https://nuerlo.com/assets/images/MASTERING-AI-CHATBOTS.png">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .blog-section-title {
+            scroll-margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="blog-page">
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/blog.html" class="active">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="blog-post-content">
+            <!-- Date with Calendar Icon -->
+            <div class="blog-post-date">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>January 12, 2025</span>
+            </div>
+            
+            <!-- Main Header -->
+            <h1 class="blog-post-title">Mastering AI Chatbots</h1>
+            
+            <!-- Sub Header -->
+            <p class="blog-post-subtitle">A comprehensive guide to building intelligent conversational agents that transform customer interactions</p>
+            
+            <!-- Author Profile -->
+            <div class="blog-post-author">
+                <div class="author-avatar"></div>
+                <div class="author-info">
+                    <p class="author-name">Mahmoud Alhabib</p>
+                    <p class="author-role">Chief Executive Officer</p>
+                </div>
+            </div>
+            
+            <!-- Blog Content -->
+            <div class="blog-post-body">
+                <!-- Table of Contents -->
+                <div class="table-of-contents" style="margin-bottom: 48px;">
+                    <h3 style="font-size: 24px; font-weight: 600; color: #ffffff; margin: 0 0 24px 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Table of contents</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                        <li><a href="#evolution-customer-service" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">The Evolution of Customer Service</a></li>
+                        <li><a href="#key-components" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Key Components of Effective Chatbots</a></li>
+                        <li><a href="#implementation-strategies" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Implementation Strategies</a></li>
+                        <li><a href="#advanced-features" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Advanced Features and Capabilities</a></li>
+                        <li><a href="#measuring-success" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Measuring Success and ROI</a></li>
+                        <li><a href="#best-practices" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Best Practices and Common Pitfalls</a></li>
+                        <li><a href="#future-trends" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Future Trends in Chatbot Technology</a></li>
+                        <li><a href="#getting-started" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Getting Started with Your First Chatbot</a></li>
+                        <li><a href="#conclusion" style="color: #ffffff; text-decoration: underline; font-size: 16px; transition: color 0.3s ease;">Conclusion</a></li>
+                    </ul>
+                </div>
+                <style>
+                    .table-of-contents a:hover {
+                        color: #b0b0b0 !important;
+                    }
+                </style>
+                <script>
+                    // Smooth scroll for table of contents links
+                    document.querySelectorAll('.table-of-contents a[href^="#"]').forEach(anchor => {
+                        anchor.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const targetId = this.getAttribute('href');
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                targetElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        });
+                    });
+                </script>
+                
+                <h2 class="blog-section-title" id="evolution-customer-service">The Evolution of Customer Service</h2>
+                <p class="blog-text">
+                    AI chatbots have revolutionized how businesses interact with customers. Gone are the days of long wait times and limited availability. Modern chatbots provide instant, intelligent responses 24/7, handling everything from simple inquiries to complex problem-solving. They're not just answering questions—they're creating seamless customer experiences that build loyalty and drive satisfaction.
+                </p>
+                <p class="blog-text">
+                    The technology has evolved dramatically from simple rule-based systems to sophisticated AI-powered agents that understand context, learn from interactions, and provide personalized assistance. Today's chatbots can handle multiple conversations simultaneously, integrate with various business systems, and continuously improve their responses through machine learning.
+                </p>
+                
+                <h2 class="blog-section-title" id="key-components">Key Components of Effective Chatbots</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&h=600&fit=crop" alt="AI chatbot components" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    Building a successful chatbot requires careful planning and understanding of several key components.
+                </p>
+                <p class="blog-text">
+                    <strong>Core technology components:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li><strong>Natural Language Processing (NLP):</strong> Understands user intent even when questions are phrased differently</li>
+                    <li><strong>Machine Learning:</strong> Learns from past conversations and improves over time</li>
+                    <li><strong>Integration capabilities:</strong> Accesses customer data, order information, and business systems</li>
+                    <li><strong>Personalization:</strong> Provides relevant information based on user history and preferences</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Design elements:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Natural conversation flow that guides users smoothly</li>
+                    <li>Graceful handling of edge cases and errors</li>
+                    <li>Smart escalation to human agents when needed</li>
+                    <li>Engaging interactions that feel natural</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Security & privacy:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Proper authentication and encryption</li>
+                    <li>Compliance with data protection regulations</li>
+                    <li>Secure handling of sensitive customer information</li>
+                    <li>Building trust through transparent data practices</li>
+                </ul>
+                
+                <h2 class="blog-section-title" id="implementation-strategies">Implementation Strategies</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=600&fit=crop" alt="Chatbot implementation" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    Successful chatbot implementation starts with identifying clear use cases and defining success metrics.
+                </p>
+                <p class="blog-text">
+                    <strong>Best starting points:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>FAQ handling for common questions</li>
+                    <li>Order status inquiries and tracking</li>
+                    <li>Appointment scheduling and booking</li>
+                    <li>Basic product information and recommendations</li>
+                    <li>High-volume, repetitive queries that can be easily automated</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Training data strategy:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Collect real customer conversations and interactions</li>
+                    <li>Identify common patterns and question types</li>
+                    <li>Create comprehensive knowledge bases</li>
+                    <li>Regular updates based on actual user interactions</li>
+                    <li>More quality data = better chatbot performance</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Testing & iteration:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Deploy in a controlled environment first</li>
+                    <li>Monitor performance and gather user feedback</li>
+                    <li>Use analytics to identify problem areas</li>
+                    <li>A/B test different conversation flows</li>
+                    <li>Continuously refine responses based on data</li>
+                </ul>
+                <p class="blog-text">
+                    As your bot matures, you can expand to more complex interactions. Regular updates and refinements are crucial for maintaining accuracy and relevance.
+                </p>
+                
+                <h2 class="blog-section-title" id="advanced-features">Advanced Features and Capabilities</h2>
+                <div style="margin: 32px 0; border-radius: 12px; overflow: hidden; max-width: 600px;">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=600&fit=crop" alt="Advanced AI chatbot features" style="width: 100%; height: auto; display: block; border-radius: 12px; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                </div>
+                <p class="blog-text">
+                    Modern chatbots go far beyond simple question-answering. They can process payments, make recommendations, schedule appointments, and even handle complex troubleshooting. Multi-language support enables businesses to serve global customers, while sentiment analysis helps identify frustrated users who may need human intervention.
+                </p>
+                <p class="blog-text">
+                    Voice integration is becoming increasingly important as voice assistants gain popularity. Chatbots that can handle both text and voice interactions provide more flexibility for users. Integration with CRM systems, e-commerce platforms, and other business tools creates a seamless experience where the chatbot can access and update information in real-time.
+                </p>
+                
+                <h2 class="blog-section-title" id="measuring-success">Measuring Success and ROI</h2>
+                <p class="blog-text">
+                    Key performance indicators for chatbots include response time, resolution rate, customer satisfaction scores, and cost savings. Track how many queries the bot handles successfully without human intervention, and monitor the reduction in support ticket volume. Customer satisfaction surveys can provide valuable insights into the user experience.
+                </p>
+                <p class="blog-text">
+                    The return on investment for chatbots can be significant. They reduce operational costs by handling routine inquiries automatically, increase customer satisfaction through instant responses, and free up human agents to focus on complex issues. Many businesses see ROI within the first few months of implementation.
+                </p>
+                
+                <h2 class="blog-section-title" id="best-practices">Best Practices and Common Pitfalls</h2>
+                <p class="blog-text">
+                    Following best practices helps ensure your chatbot delivers value and builds trust with users.
+                </p>
+                <p class="blog-text">
+                    <strong>Implementation best practices:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Start simple and expand gradually—don't try to handle every scenario from day one</li>
+                    <li>Focus on the most common use cases first</li>
+                    <li>Always provide an easy way to reach a human agent</li>
+                    <li>Make the handoff to human agents seamless</li>
+                    <li>Keep your chatbot's personality consistent with your brand voice</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Common pitfalls to avoid:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li><strong>Over-automation:</strong> Some interactions require human empathy and judgment</li>
+                    <li><strong>Poor escalation:</strong> Know when to escalate and make it easy for users</li>
+                    <li><strong>Inconsistent personality:</strong> Maintain brand voice across all interactions</li>
+                    <li><strong>Neglecting maintenance:</strong> Regular updates are essential for accuracy</li>
+                </ul>
+                <p class="blog-text">
+                    <strong>Maintenance checklist:</strong>
+                </p>
+                <ul class="blog-text" style="margin: 16px 0; padding-left: 24px; color: #d0d0d0; line-height: 1.8;">
+                    <li>Update knowledge base regularly</li>
+                    <li>Monitor for errors or misunderstandings</li>
+                    <li>Continuously improve based on user feedback</li>
+                    <li>Stay current with new features and capabilities</li>
+                    <li>Track performance metrics and optimize</li>
+                </ul>
+                <p class="blog-text">
+                    The chatbot landscape is evolving rapidly, so staying current is important for maintaining a competitive edge.
+                </p>
+                
+                <h2 class="blog-section-title" id="future-trends">Future Trends in Chatbot Technology</h2>
+                <p class="blog-text">
+                    The chatbot industry is evolving rapidly, with new capabilities emerging regularly. Voice-first interactions are becoming more natural, allowing users to have conversations that feel increasingly human-like. Multimodal chatbots that combine text, voice, and visual elements are creating richer, more engaging experiences.
+                </p>
+                <p class="blog-text">
+                    Emotional intelligence in chatbots is advancing, enabling them to detect user sentiment, adapt their tone, and provide empathetic responses. This capability is particularly valuable in customer service scenarios where understanding and addressing customer emotions is crucial to satisfaction.
+                </p>
+                <p class="blog-text">
+                    Integration with emerging technologies like augmented reality and virtual reality is opening new possibilities for chatbot interactions. Imagine troubleshooting a product issue with a chatbot that can guide you through visual overlays or virtual demonstrations. These innovations are transforming how customers interact with businesses.
+                </p>
+                
+                <h2 class="blog-section-title" id="getting-started">Getting Started with Your First Chatbot</h2>
+                <p class="blog-text">
+                    If you're ready to build your first chatbot, start by identifying a clear use case with measurable outcomes. Choose a platform that matches your technical capabilities and budget. Many modern chatbot platforms offer no-code or low-code solutions that make it easy to get started without extensive programming knowledge.
+                </p>
+                <p class="blog-text">
+                    Begin with a pilot program focused on a specific department or function. This allows you to learn, iterate, and demonstrate value before expanding. Gather feedback from users, measure performance against your goals, and refine your approach based on real-world results.
+                </p>
+                
+                <h2 class="blog-section-title" id="conclusion">Conclusion</h2>
+                <p class="blog-text">
+                    Mastering AI chatbots is an essential skill for modern businesses. These intelligent agents are transforming customer service, streamlining operations, and creating new opportunities for engagement. The technology has reached a level of maturity where implementation is accessible, and the benefits are measurable.
+                </p>
+                <p class="blog-text">
+                    Success with chatbots comes from understanding your users' needs, choosing the right technology, and continuously improving based on feedback. Start with clear goals, build thoughtfully, and iterate based on real-world usage. The businesses that master chatbot technology today will have a significant advantage in the customer experience landscape of tomorrow.
+                </p>
+                
+                <div class="blog-post-signature">
+                    <p class="signature-name">Mahmoud Alhabib</p>
+                    <p class="signature-role">Chief Executive Officer</p>
+                    <p class="signature-company">Nuerlo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Latest Insights Section -->
+    <div class="latest-insights-section">
+        <div class="latest-insights-container">
+            <h2 class="latest-insights-header">Latest Insights</h2>
+            <div class="latest-insights-grid">
+                <a href="/ai-in-business.html" class="latest-insight-card">
+                    <div class="latest-insight-image">
+                        <img src="/assets/images/THE-FUTURE-OF-AI-IN-BUSINESS" alt="The Future of AI in Business" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="latest-insight-content">
+                        <h3 class="latest-insight-title">The Future of AI in Business</h3>
+                        <p class="latest-insight-date">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            November 13, 2025
+                        </p>
+                        <span class="blog-card-link">
+                            Read more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+                
+                <a href="/building-ai-app.html" class="latest-insight-card">
+                    <div class="latest-insight-image">
+                        <img src="/assets/images/BUILDING0-YOUR-FIRST-AI-APPLICATION.png" alt="Building Your First AI Application" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="latest-insight-content">
+                        <h3 class="latest-insight-title">Building Your First AI Application</h3>
+                        <p class="latest-insight-date">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            January 8, 2025
+                        </p>
+                        <span class="blog-card-link">
+                            Read more
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/index.html#careers">Careers</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="/index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/user-agreement.html">User Agreement</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html#cookies">Cookie Policy</a></li>
+                        <li><a href="/fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>
+
+

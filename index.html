@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marketplace for AI Education | Nuerlo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Nuerlo - The marketplace for AI education. Discover AI courses, tutorials, and resources to advance your career. Learn AI development, machine learning, and cutting-edge technologies.">
+    <meta name="keywords" content="AI education, AI courses, machine learning courses, AI marketplace, AI training, artificial intelligence education, AI learning platform, AI tutorials">
+    <meta name="author" content="Nuerlo">
+    <link rel="canonical" href="https://nuerlo.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nuerlo.com/">
+    <meta property="og:title" content="The Marketplace for AI Education | Nuerlo">
+    <meta property="og:description" content="Discover AI courses, tutorials, and resources to advance your career. Learn AI development, machine learning, and cutting-edge technologies.">
+    <meta property="og:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nuerlo.com/">
+    <meta property="twitter:title" content="The Marketplace for AI Education | Nuerlo">
+    <meta property="twitter:description" content="Discover AI courses, tutorials, and resources to advance your career. Learn AI development, machine learning, and cutting-edge technologies.">
+    <meta property="twitter:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <!-- Hero Background with Purple Glows -->
+    <div class="hero-background">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+        <div class="glow-orb glow-orb-4"></div>
+        <div class="glow-orb glow-orb-5"></div>
+        <div class="glow-orb glow-orb-6"></div>
+        <div class="glow-orb glow-orb-7"></div>
+        <div class="glow-orb glow-orb-8"></div>
+        <div class="glow-orb glow-orb-9"></div>
+        <div class="gradient-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html" class="active">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge fade-in fade-in-delay-1">
+                #1 AI Course Marketplace
+                <div class="badge-info-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <text x="8" y="11" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="currentColor" text-anchor="middle">i</text>
+                    </svg>
+                </div>
+                <div class="badge-tooltip">
+                    <div class="tooltip-content">
+                        <div class="tooltip-text">Rated #1 by leading tech reviewers</div>
+                        <div class="tooltip-logo">
+                            <img src="/assets/images/Capterra-logo-4..webp" alt="Capterra" style="height: 28px; width: auto;" loading="lazy">
+                            <img src="/assets/images/Capterra-logo-3..webp" alt="Capterra" style="height: 28px; width: auto;" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="tooltip-arrow"></div>
+                </div>
+            </div>
+            <h1 class="hero-title fade-in fade-in-delay-2">The AI Revolution Won't Wait. Neither Should You.</h1>
+            <p class="hero-subtitle fade-in fade-in-delay-3">Get exclusive AI courses and models designed for real-world results — stay ahead of the curve.</p>
+            <a href="https://dashboard.nuerlo.com/register" class="hero-cta-btn fade-in fade-in-delay-4">Start Now</a>
+            <p class="hero-tagline fade-in fade-in-delay-5">Start Now. Earn High.</p>
+            
+            <div class="payment-section">
+                <img src="/assets/images/Capterra-logo.png" alt="Capterra" class="inline-logo capterra-logo-hover" style="height: 28px; margin-right: 10px; vertical-align: middle;">
+                <span class="trust-text">Used by 326 students</span>
+            </div>
+            
+            <h2 class="section-title fade-in">Master the AI Era</h2>
+            <p class="section-subtitle fade-in fade-in-delay-1">From the Gold Rush to the AI Revolution — seize your opportunity to build the future</p>
+            
+            <div class="comparison-section fade-in fade-in-delay-1">
+                <div class="comparison-box">
+                    <div class="year-badge">1849</div>
+                    <p class="comparison-text">In 1849, the California Gold Rush transformed ordinary people into pioneers of wealth. Those who seized the opportunity didn't just find gold — they built empires.</p>
+                </div>
+                
+                <div class="arrow-container">
+                    <svg class="purple-arrow" width="32" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L12 22M12 22L6 16M12 22L18 16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <div class="comparison-box">
+                    <div class="year-badge">2025</div>
+                    <p class="comparison-text">Today we are in the AI Gold Rush. The difference? You don't need a pickaxe — you need knowledge. Learning AI isn't just an advantage, it's the new frontier of wealth creation.</p>
+                </div>
+                
+                <div class="mobile-separator-arrow">
+                    <svg width="24" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L12 22M12 22L6 16M12 22L18 16" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="features-grid fade-in fade-in-delay-1">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Chatbots</h3>
+                    <p class="feature-description">Build intelligent conversational agents that handle customer inquiries 24/7</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Receptionists</h3>
+                    <p class="feature-description">Create virtual front desk solutions for seamless customer service</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3s-4.5 4.03-4.5 9 2.015 9 4.5 9zm8.716-6.747a9.004 9.004 0 01-8.716 6.747m8.716-6.747A9.004 9.004 0 0012 3.004M3.284 14.253a9.004 9.004 0 008.716 6.747"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Websites</h3>
+                    <p class="feature-description">Develop smart web experiences with intelligent user interactions</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Content Generators</h3>
+                    <p class="feature-description">Create engaging content at scale with AI-powered writing tools</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Consulting</h3>
+                    <p class="feature-description">Guide businesses through AI transformation and implementation</p>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0018 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">AI Schedulers</h3>
+                    <p class="feature-description">Optimize time management with smart scheduling algorithms</p>
+                </div>
+            </div>
+            
+            <h2 class="section-title fade-in">Turn Skills Into Income</h2>
+            <p class="section-subtitle fade-in fade-in-delay-1">Master AI and start building profitable solutions clients are actively paying for</p>
+            
+            <div class="skills-content fade-in fade-in-delay-2">
+                <!-- Learn at Your Pace -->
+                <div class="skill-item">
+                    <div class="skill-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=600&fit=crop" alt="Learn at Your Own Pace" class="skill-img" style="border-radius: 12px; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Learn at Your Pace</h3>
+                        <p class="skill-description">Life gets busy. That's why we built our platform to work around your schedule, not the other way around. Jump in when you have time, pause when you don't. No deadlines, no pressure—just quality content that's there when you need it.</p>
+                    </div>
+                </div>
+
+                <!-- Built-in Community -->
+                <div class="skill-item">
+                    <div class="skill-text">
+                        <h3 class="skill-title">Built-in Community</h3>
+                        <p class="skill-description">You're not learning alone. Our community is packed with people who've been where you are—from complete beginners to seasoned pros. Ask questions, share wins, get unstuck. It's like having a study group that never sleeps.</p>
+                    </div>
+                    <div class="skill-image">
+                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=600&fit=crop" alt="Built-in Community" class="skill-img" style="border-radius: 12px; object-fit: cover;" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Always Updated Content -->
+                <div class="skill-item">
+                    <div class="skill-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=600&fit=crop" alt="Always Updated Content" class="skill-img" style="border-radius: 12px; object-fit: cover;" loading="lazy">
+                    </div>
+                    <div class="skill-text">
+                        <h3 class="skill-title">Always Updated Content</h3>
+                        <p class="skill-description">AI moves fast. What's cutting-edge today might be outdated tomorrow. That's why we're constantly refreshing our content with the latest tools, techniques, and real-world applications. No stale information, just the stuff that actually matters right now.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="section-title" id="faq">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about our AI courses and platform</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How do I get started with the courses?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply sign up for an account, browse our course catalog, and enroll in any course that interests you. You'll have lifetime access to all course materials and can learn at your own pace.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Do I need any prior experience with AI?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No prior experience required! Our courses are designed for beginners and include step-by-step tutorials. We start with the basics and gradually build up to advanced concepts.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>What kind of support do you provide?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer 24/7 community support, instructor Q&A sessions, and detailed documentation. Our community forum is always active with students helping each other and instructors providing guidance.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Can I get a refund if I'm not satisfied?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer a 30-day money-back guarantee. If you're not completely satisfied with your purchase, contact our support team for a full refund, no questions asked.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>How long do I have access to the courses?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You have lifetime access to all courses you purchase. This includes any future updates, new materials, and bonus content that gets added to the courses over time.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3>Are the courses updated regularly?</h3>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We regularly update our courses to reflect the latest AI developments, new tools, and industry best practices. All updates are included at no additional cost.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-cta-box">
+                <div class="final-cta-content">
+                    <h1 class="final-cta-title">
+                        <span class="desktop-text">Learn AI faster with the #1 marketplace for AI-powered courses, built to help students master the skills of tomorrow.</span>
+                        <span class="mobile-text">Master AI skills faster with the #1 AI course marketplace.</span>
+                    </h1>
+                    <p class="final-cta-subtitle">Get started for free today.</p>
+                    <a href="https://dashboard.nuerlo.com/register" class="final-cta-btn">Start Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="user-agreement.html">User Agreement</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="privacy-policy.html#cookies">Cookie Policy</a></li>
+                        <li><a href="fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>

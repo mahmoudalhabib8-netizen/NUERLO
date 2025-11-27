@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Nuerlo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Page not found. The page you're looking for doesn't exist. Return to Nuerlo's homepage to explore our AI education courses.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://nuerlo.com/404.html">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        .container {
+            padding: 20px !important;
+            min-height: auto !important;
+            align-items: center !important;
+        }
+        
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 120px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .error-404 {
+            font-size: 200px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .error-message {
+            font-size: 52px;
+            color: #ffffff;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        
+        .error-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .error-cta-btn {
+            background: linear-gradient(135deg, #a476ff 0%, #9b6bff 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .error-cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .error-signup-btn {
+            background: #4b5563;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 20px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .error-signup-btn:hover {
+            background: #6b7280;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .error-404 {
+                font-size: 160px;
+            }
+            
+            .error-message {
+                font-size: 36px;
+            }
+            
+            .error-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .error-cta-btn,
+            .error-signup-btn {
+                width: 100%;
+                padding: 16px 32px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="error-container">
+            <h1 class="error-404 fade-in fade-in-delay-1">404</h1>
+            <p class="error-message fade-in fade-in-delay-2">
+                Ooops! Page<br>not found
+            </p>
+            <div class="error-buttons fade-in fade-in-delay-3">
+                <a href="/index.html" class="error-cta-btn">Back to home page</a>
+                <a href="https://dashboard.nuerlo.com/register" class="error-signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/user-agreement.html">User Agreement</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html##cookies">Cookie Policy</a></li>
+                        <li><a href="/fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    <script>
+        function toggleMenu(element) {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const isOpen = overlay.classList.contains('active');
+            
+            if (isOpen) {
+                overlay.classList.remove('active');
+                element.classList.remove('active');
+                document.body.style.overflow = '';
+            } else {
+                overlay.classList.add('active');
+                element.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+        
+        // Close mobile menu when clicking outside
+        document.getElementById('mobileMenuOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleMenu(document.querySelector('.hamburger'));
+            }
+        });
+    </script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>
+

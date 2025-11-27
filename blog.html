@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insights & Updates</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read the latest AI insights, tutorials, and guides. Learn about AI tools for developers, building AI applications, chatbots, and instructional strategies for effective learning.">
+    <meta name="keywords" content="AI blog, AI insights, artificial intelligence articles, AI tutorials, AI guides, machine learning blog, AI news, AI education blog">
+    <meta name="author" content="Nuerlo">
+    <link rel="canonical" href="https://nuerlo.com/blog.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nuerlo.com/blog.html">
+    <meta property="og:title" content="AI Insights & Updates">
+    <meta property="og:description" content="Read the latest AI insights, tutorials, and guides. Learn about AI tools, building AI applications, and instructional strategies.">
+    <meta property="og:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nuerlo.com/blog.html">
+    <meta property="twitter:title" content="AI Insights & Updates">
+    <meta property="twitter:description" content="Read the latest AI insights, tutorials, and guides. Learn about AI tools, building AI applications, and instructional strategies.">
+    <meta property="twitter:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="blog-page">
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html">Reviews</a>
+                <a href="/blog.html" class="active">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">AI Insights & Updates</h1>
+            <p class="hero-subtitle fade-in fade-in-delay-1">Stay ahead of the curve with the latest AI trends, tutorials, and expert insights from the Nuerlo community.</p>
+            
+            <div class="blog-search-bar fade-in fade-in-delay-2">
+                <input type="text" placeholder="Search" class="blog-search-input">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="blog-search-icon">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+            </div>
+            
+            <div class="blog-cards-grid fade-in fade-in-delay-3">
+                <a href="/ai-in-business.html" class="blog-card-link-wrapper">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop" alt="The Future of AI in Business" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" loading="lazy">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">The Future of AI in Business</h3>
+                            <p class="blog-card-date">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                November 13, 2025
+                            </p>
+                            <span class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/ai-chatbots.html" class="blog-card-link-wrapper">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=800&h=600&fit=crop" alt="Mastering AI Chatbots" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" loading="lazy">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Mastering AI Chatbots</h3>
+                            <p class="blog-card-date">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                January 12, 2025
+                            </p>
+                            <span class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/ai-tools-developers.html" class="blog-card-link-wrapper">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=600&fit=crop" alt="AI Tools Every Developer Needs" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" loading="lazy">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">AI Tools Every Developer Needs</h3>
+                            <p class="blog-card-date">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                January 10, 2025
+                            </p>
+                            <span class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/building-ai-app.html" class="blog-card-link-wrapper">
+                    <div class="blog-card">
+                        <div class="blog-card-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&h=600&fit=crop" alt="Building Your First AI Application" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;" loading="lazy">
+                        </div>
+                        <div class="blog-card-content">
+                            <h3 class="blog-card-title">Building Your First AI Application</h3>
+                            <p class="blog-card-date">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="calendar-icon">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                                </svg>
+                                January 8, 2025
+                            </p>
+                            <span class="blog-card-link">
+                                Read more
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="arrow-icon">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/index.html#careers">Careers</a></li>
+                        <li><a href="/index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="/index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/user-agreement.html">User Agreement</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html#cookies">Cookie Policy</a></li>
+                        <li><a href="/fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    
+    <script>
+        // Mobile scroll detection for blog section header activation
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const blogCardsGrid = document.querySelector('.blog-cards-grid');
+            const blogLink = document.querySelector('.nav-links a[href="/blog.html"]');
+            
+            // Only run on mobile devices
+            if (window.innerWidth <= 768 && navbar && blogCardsGrid && blogLink) {
+                function checkBlogPosition() {
+                    const rect = blogCardsGrid.getBoundingClientRect();
+                    const viewportHeight = window.innerHeight;
+                    const middleOfViewport = viewportHeight / 2;
+                    
+                    // Check if blog cards are in the middle of the viewport
+                    // The blog is considered "in the middle" when its top has passed the middle point
+                    const blogTop = rect.top;
+                    const blogBottom = rect.bottom;
+                    
+                    // Activate when blog section reaches or passes the middle of the screen
+                    if (blogTop <= middleOfViewport && blogBottom >= middleOfViewport - 100) {
+                        navbar.classList.add('navbar-blog-active');
+                        if (!blogLink.classList.contains('active')) {
+                            blogLink.classList.add('active');
+                        }
+                    } else if (blogTop > middleOfViewport) {
+                        // If we scroll back up above the middle, remove the class
+                        navbar.classList.remove('navbar-blog-active');
+                        blogLink.classList.remove('active');
+                    }
+                }
+                
+                // Initial check
+                checkBlogPosition();
+                
+                // Handle scroll events with throttling
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        window.requestAnimationFrame(() => {
+                            checkBlogPosition();
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                }, { passive: true });
+                
+                // Handle resize to re-check on orientation change
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth <= 768) {
+                        checkBlogPosition();
+                    } else {
+                        // Remove active state if switching to desktop
+                        navbar.classList.remove('navbar-blog-active');
+                        blogLink.classList.remove('active');
+                    }
+                });
+            }
+        });
+        
+        // Blog search functionality with relevance sorting
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.querySelector('.blog-search-input');
+            const blogCardsGrid = document.querySelector('.blog-cards-grid');
+            const blogCardWrappers = document.querySelectorAll('.blog-card-link-wrapper');
+            
+            if (searchInput && blogCardWrappers.length > 0) {
+                // Store original order
+                const originalOrder = Array.from(blogCardWrappers);
+                
+                searchInput.addEventListener('input', function(e) {
+                    const searchQuery = e.target.value.toLowerCase().trim();
+                    
+                    if (searchQuery === '') {
+                        // Reset to original order
+                        originalOrder.forEach(wrapper => {
+                            wrapper.style.display = '';
+                            blogCardsGrid.appendChild(wrapper);
+                        });
+                        return;
+                    }
+                    
+                    // Score and sort articles by relevance
+                    const scoredArticles = Array.from(blogCardWrappers).map(wrapper => {
+                        const card = wrapper.querySelector('.blog-card');
+                        const titleElement = card ? card.querySelector('.blog-card-title') : null;
+                        const titleText = titleElement ? titleElement.textContent.toLowerCase() : '';
+                        
+                        let score = 0;
+                        
+                        // Exact title match gets highest score
+                        if (titleText === searchQuery) {
+                            score = 1000;
+                        }
+                        // Title starts with search query
+                        else if (titleText.startsWith(searchQuery)) {
+                            score = 500;
+                        }
+                        // Title contains search query
+                        else if (titleText.includes(searchQuery)) {
+                            score = 300;
+                        }
+                        // Check individual words
+                        else {
+                            const queryWords = searchQuery.split(' ');
+                            const titleWords = titleText.split(' ');
+                            
+                            queryWords.forEach(queryWord => {
+                                if (titleWords.includes(queryWord)) {
+                                    score += 100;
+                                }
+                                titleWords.forEach(titleWord => {
+                                    if (titleWord.includes(queryWord) || queryWord.includes(titleWord)) {
+                                        score += 50;
+                                    }
+                                });
+                            });
+                        }
+                        
+                        return { wrapper, score, titleText };
+                    });
+                    
+                    // Sort by score (highest first), then alphabetically
+                    scoredArticles.sort((a, b) => {
+                        if (b.score !== a.score) {
+                            return b.score - a.score;
+                        }
+                        return a.titleText.localeCompare(b.titleText);
+                    });
+                    
+                    // Reorder cards in the grid
+                    scoredArticles.forEach(({ wrapper, score }) => {
+                        if (score > 0) {
+                            wrapper.style.display = '';
+                            blogCardsGrid.appendChild(wrapper);
+                        } else {
+                            wrapper.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Read authentic student reviews and testimonials about Nuerlo's AI education courses. See what students say about their learning experience and outcomes.">
+    <meta name="keywords" content="Nuerlo reviews, AI course reviews, student testimonials, AI education reviews, online course reviews, learning platform reviews">
+    <meta name="author" content="Nuerlo">
+    <link rel="canonical" href="https://nuerlo.com/reviews.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nuerlo.com/reviews.html">
+    <meta property="og:title" content="Reviews">
+    <meta property="og:description" content="Read authentic student reviews and testimonials about Nuerlo's AI education courses.">
+    <meta property="og:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://nuerlo.com/reviews.html">
+    <meta property="twitter:title" content="Reviews">
+    <meta property="twitter:description" content="Read authentic student reviews and testimonials about Nuerlo's AI education courses.">
+    <meta property="twitter:image" content="https://nuerlo.com/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Favicon (Browser Tab Icon) -->
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- App Icons (Mobile Bookmarks) -->
+    <link rel="apple-touch-icon" href="/assets/images/NUERLO-LOGO.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/NUERLO-LOGO.png">
+    
+    <!-- Mobile Meta Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Nuerlo">
+    <meta name="theme-color" content="#1a1a1a">
+    
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="reviews-page">
+    <!-- Ambient Background -->
+    <div class="ambient-background">
+        <div class="noise-overlay"></div>
+    </div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="/index.html">
+                    <img src="/assets/images/LOGOWHITE.png" alt="Nuerlo Logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="/index.html">Home</a>
+                <a href="/pricing.html">Pricing</a>
+                <a href="/reviews.html" class="active">Reviews</a>
+                <a href="/blog.html">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="login-btn" id="signin-btn">Sign In</a>
+                <a href="https://dashboard.nuerlo.com/register" class="cta-btn">Start Now</a>
+            </div>
+            <div class="mobile-actions">
+                <a href="https://dashboard.nuerlo.com/login" class="mobile-login">Sign In</a>
+                <div class="hamburger" onclick="toggleMenu(this)">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-menu-nav">
+                <a href="/index.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9 L10 3 L17 9 L17 17 L12 17 L12 12 L8 12 L8 17 L3 17 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+                <a href="/pricing.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10 6 L10 10 L13 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Pricing</span>
+                </a>
+                <a href="/reviews.html" class="mobile-menu-link active">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3 L12 9 L18 10 L14 14 L15 20 L10 17 L5 20 L6 14 L2 10 L8 9 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Reviews</span>
+                </a>
+                <a href="/blog.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L17 5 L17 15 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M3 8 L17 8" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M7 11 L17 11" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Blog</span>
+                </a>
+                <a href="/privacy-policy.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L3 5 L3 9 C3 13 6 16 10 17 C14 16 17 13 17 9 L17 5 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <circle cx="10" cy="9" r="2" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="/fees.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2 L2 6 L2 14 L10 18 L18 14 L18 6 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M10 2 L10 18" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M2 6 L18 6" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>Fees & Charges</span>
+                </a>
+                <a href="/user-agreement.html" class="mobile-menu-link">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 5 L10 2 L17 5 L17 15 L10 18 L3 15 Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                        <path d="M7 10 L9 12 L13 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>User Agreement</span>
+                </a>
+                <a href="https://dashboard.nuerlo.com/register" class="mobile-menu-link mobile-start-now-btn">
+                    <svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 10 L12 10 M10 8 L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <span>Start Now</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">What Our Students Say</h1>
+            <p class="hero-subtitle fade-in fade-in-delay-1">Real reviews from real students who've transformed their careers with AI.</p>
+            
+            <div class="capterra-logo-section fade-in fade-in-delay-2">
+                <img src="/assets/images/Capterra-logo.png" alt="Capterra" class="capterra-logo-hover" loading="lazy">
+                <img src="/assets/images/Capterra-logo-2..webp" alt="Capterra" class="capterra-logo-hover" loading="lazy">
+                <img src="/assets/images/Capterra-logo-3..webp" alt="Capterra" class="capterra-logo-hover" loading="lazy">
+                <img src="/assets/images/Capterra-logo-4..webp" alt="Capterra" class="capterra-logo-hover" loading="lazy">
+            </div>
+            
+            <div class="reviews-grid" id="reviewsGrid">
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-01-15">
+                    <div class="review-content">
+                        <p class="review-text">helped me understand ai better than i thought i would. also gave me ways to actually pitch this to clients which was helpful</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">LM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Lawrence Martinez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-01-20">
+                    <div class="review-content">
+                        <p class="review-text">Honestly wasn't sure if I'd get it but the courses are straightforward. Good stuff.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JH</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Julie Hernandez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-01-25">
+                    <div class="review-content">
+                        <p class="review-text">Thank you! The platform is easy to use and I'm actually learning something useful for once.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">RB</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Rafael Brooks</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-02-01">
+                    <div class="review-content">
+                        <p class="review-text">Solid courses. Nothing groundbreaking but they get the job done.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Sueneil Mitchell</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-02-05">
+                    <div class="review-content">
+                        <p class="review-text">I appreciate how simple everything is laid out. Just what you need to know.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">CW</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Candice Williams</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-02-10">
+                    <div class="review-content">
+                        <p class="review-text">tried other platforms before this one is way better organized</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SC</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Simon Chen</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-02-15">
+                    <div class="review-content">
+                        <p class="review-text">Good content. Wish there were more examples but overall pretty helpful. The part about pitching to businesses was useful.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">LD</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Leonard Davis</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-02-20">
+                    <div class="review-content">
+                        <p class="review-text">thanks for making this accessible. finally something that doesnt feel like its trying to sell me something</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">DP</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Daniela Perez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-02-25">
+                    <div class="review-content">
+                        <p class="review-text">Better than most platforms I've tried. Pricing is fair too.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JL</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Joseph Lopez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-03-01">
+                    <div class="review-content">
+                        <p class="review-text">Helped me understand what I was doing wrong. Also showed me how to present this stuff to businesses which I needed.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">DR</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">David Rodriguez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-03-05">
+                    <div class="review-content">
+                        <p class="review-text">decent courses. learned some useful stuff</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">PW</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Paul Wilson</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-03-10">
+                    <div class="review-content">
+                        <p class="review-text">Thank you for putting this together. It's been helpful for my work.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AS</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Ashley Smith</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-03-15">
+                    <div class="review-content">
+                        <p class="review-text">pretty straightforward. no complaints really</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">CM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Cristina Martinez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-03-20">
+                    <div class="review-content">
+                        <p class="review-text">Easy to follow along. Better than watching random YouTube videos.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">LT</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Lanetria Thompson</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-03-25">
+                    <div class="review-content">
+                        <p class="review-text">Saves me time trying to figure things out on my own.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">CB</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Charles Brown</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-04-01">
+                    <div class="review-content">
+                        <p class="review-text">navigation is simple which i appreciate. hate complicated interfaces</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">TK</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Theoneste Kim</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-04-05">
+                    <div class="review-content">
+                        <p class="review-text">Good resource for beginners. Not overwhelming which is nice.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SR</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Sahar Roberts</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-04-10">
+                    <div class="review-content">
+                        <p class="review-text">works for what i need. nothing fancy but gets the point across</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SH</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Samantha Harris</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-04-15">
+                    <div class="review-content">
+                        <p class="review-text">I like how everything is organized. Makes it easier to learn at my own pace without feeling rushed.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">KL</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Kim Lee</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-04-20">
+                    <div class="review-content">
+                        <p class="review-text">thanks for the help. learned things i didnt know before</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">IA</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Ioan Anderson</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-04-25">
+                    <div class="review-content">
+                        <p class="review-text">Better value than other platforms I looked at. Content is actually useful.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">NW</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Natasha White</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-05-01">
+                    <div class="review-content">
+                        <p class="review-text">dont have to spend forever searching for info anymore. its all here</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">AJ</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Amanda Johnson</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-05-05">
+                    <div class="review-content">
+                        <p class="review-text">Well structured courses. Easy to follow even if you're new to this stuff.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">BM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Bart Martinez</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-05-10">
+                    <div class="review-content">
+                        <p class="review-text">helped me figure things out faster than i would have on my own. also learned how to pitch this to clients</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">RP</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Rahul Patel</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-05-15">
+                    <div class="review-content">
+                        <p class="review-text">They keep adding new content which is good. Feels like they actually care about updating things.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JG</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">José Garcia</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-05-20">
+                    <div class="review-content">
+                        <p class="review-text">simple and effective. no complaints</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">GV</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Gustavo Vargas</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-05-25">
+                    <div class="review-content">
+                        <p class="review-text">I like that I can go at my own speed. Some days I have more time than others.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">CF</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Clyde Foster</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-06-01">
+                    <div class="review-content">
+                        <p class="review-text">after finishing one course signed up for more. helpful stuff</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">JW</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">James Wilson</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-06-05">
+                    <div class="review-content">
+                        <p class="review-text">Good platform overall. Could use more examples but the content is solid.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">RK</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Radakris Kumar</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-automation" data-date="2024-06-10">
+                    <div class="review-content">
+                        <p class="review-text">easy to use. first choice when i need to learn something new</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">SM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Sueneil Moore</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card" data-rating="5" data-course="ai-websites" data-date="2024-06-15">
+                    <div class="review-content">
+                        <p class="review-text">Thank you! Customer support actually responds which is rare these days.</p>
+                    </div>
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div class="reviewer-avatar">KM</div>
+                            <div class="reviewer-details">
+                                <h4 class="reviewer-name">Kim Martin</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Load More Reviews Button -->
+            <div class="load-more-section">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Reviews</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Product</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/pricing.html">Pricing</a></li>
+                        <li><a href="/reviews.html">Reviews</a></li>
+                        <li><a href="https://dashboard.nuerlo.com/login">Sign In</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Company</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/index.html##careers">Careers</a></li>
+                        <li><a href="/index.html##contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Resources</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#support">Support</a></li>
+                        <li><a href="/index.html##faq">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-column-title">Legal</h3>
+                    <ul class="footer-links-list">
+                        <li><a href="/user-agreement.html">User Agreement</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/privacy-policy.html##cookies">Cookie Policy</a></li>
+                        <li><a href="/fees.html">Fees</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-bottom-border"></div>
+            <div class="footer-bottom-left">
+                <a href="/index.html" class="footer-logo-link">
+                    <img src="/assets/images/LOGO.png" alt="Nuerlo Logo" class="footer-logo-img" loading="lazy">
+                </a>
+            </div>
+            <div class="footer-bottom-center">
+                <p class="footer-copyright">&copy; 2024 Nuerlo. All rights reserved.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="footer-social-links">
+                    <a href="https://instagram.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="https://x.com/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#a476ff">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/nuerlo" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a476ff" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK (for auth state checking only) -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, setPersistence, browserLocalPersistence, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
+        
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDZvKVOLry7oDekiRxZlY_7-u-Nfe15Zts",
+            authDomain: "nuerlo-course-platform.firebaseapp.com",
+            projectId: "nuerlo-course-platform",
+            storageBucket: "nuerlo-course-platform.firebasestorage.app",
+            messagingSenderId: "1089335169355",
+            appId: "1:1089335169355:web:a327f39b892f5e752398ce",
+            measurementId: "G-D6BX96Z7KN"
+        };
+        
+        // Initialize Firebase (with auth for state checking only)
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const analytics = getAnalytics(app);
+        
+        // Set Firebase persistence to LOCAL so auth state syncs between tabs/sessions
+        setPersistence(auth, browserLocalPersistence).catch((error) => {
+            console.error('Error setting Firebase persistence:', error);
+        });
+        
+        // Make Firebase available globally
+        window.firebase = { auth, analytics };
+        
+        // Listen for auth state changes and update navigation buttons
+        onAuthStateChanged(auth, (user) => {
+            console.log('Firebase onAuthStateChanged fired');
+            console.log('User object:', user);
+            console.log('User is null?', user === null);
+            console.log('User is undefined?', user === undefined);
+            console.log('!!user:', !!user);
+            
+            // Explicitly check if user exists - user will be null if not authenticated
+            const isAuthenticated = user !== null && user !== undefined;
+            console.log('isAuthenticated:', isAuthenticated);
+            
+            const updateButtons = () => {
+                if (typeof window.updateNavigationButtons === 'function') {
+                    window.updateNavigationButtons(isAuthenticated);
+                    return true;
+                }
+                return false;
+            };
+            
+            // Try to update buttons immediately
+            if (!updateButtons()) {
+                // If function isn't available yet, wait for it (with retries)
+                let attempts = 0;
+                const maxAttempts = 15; // 3 seconds total (200ms * 15)
+                const retryInterval = setInterval(() => {
+                    attempts++;
+                    if (updateButtons() || attempts >= maxAttempts) {
+                        clearInterval(retryInterval);
+                    }
+                }, 200);
+            }
+        });
+    </script>
+    
+    <script type="module" src="/js/non-auth-navigation.js"></script>
+    
+    <!-- Load More Reviews Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const reviewCards = document.querySelectorAll('.review-card');
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            const initialShowCount = 12;
+            const loadCount = 4;
+            let currentlyVisible = initialShowCount;
+            let allReviewsLoaded = false;
+            
+            // Initially hide all cards beyond the first 12
+            reviewCards.forEach((card, index) => {
+                if (index >= initialShowCount) {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update load more button based on total reviews
+            function updateLoadMoreButton() {
+                if (currentlyVisible >= reviewCards.length) {
+                    // All reviews are loaded, change button to "Scroll to Top"
+                    allReviewsLoaded = true;
+                    loadMoreBtn.textContent = 'Scroll to Top';
+                    loadMoreBtn.style.display = 'block';
+                } else {
+                    // Still have more reviews to load
+                    allReviewsLoaded = false;
+                    loadMoreBtn.textContent = 'Load More Reviews';
+                    loadMoreBtn.style.display = 'block';
+                }
+            }
+            
+            // Initial button state
+            updateLoadMoreButton();
+            
+            // Smooth scroll to top function
+            function scrollToTop() {
+                const startPosition = window.pageYOffset || window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                
+                if (startPosition === 0) return; // Already at top
+                
+                const duration = 1200; // 1.2 second scroll duration for smoother animation
+                const startTime = performance.now ? performance.now() : Date.now();
+                let animationFrameId;
+                
+                function easeInOutCubic(t) {
+                    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                }
+                
+                function scrollStep() {
+                    const currentTime = performance.now ? performance.now() : Date.now();
+                    const timeElapsed = currentTime - startTime;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    const ease = easeInOutCubic(progress);
+                    
+                    const currentPosition = Math.floor(startPosition * (1 - ease));
+                    
+                    // Scroll using the most compatible method
+                    window.scrollTo(0, currentPosition);
+                    document.documentElement.scrollTop = currentPosition;
+                    if (document.body) {
+                        document.body.scrollTop = currentPosition;
+                    }
+                    
+                    if (progress < 1) {
+                        animationFrameId = requestAnimationFrame(scrollStep);
+                    } else {
+                        // Ensure we're exactly at the top
+                        window.scrollTo(0, 0);
+                        document.documentElement.scrollTop = 0;
+                        if (document.body) {
+                            document.body.scrollTop = 0;
+                        }
+                    }
+                }
+                
+                // Start the animation
+                animationFrameId = requestAnimationFrame(scrollStep);
+            }
+            
+            // Button click handler
+            loadMoreBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (allReviewsLoaded) {
+                    // Scroll to top smoothly
+                    scrollToTop();
+                } else {
+                    // Load more reviews
+                    const nextBatch = Math.min(currentlyVisible + loadCount, reviewCards.length);
+                    
+                    for (let i = currentlyVisible; i < nextBatch; i++) {
+                        if (reviewCards[i]) {
+                            reviewCards[i].style.display = 'flex';
+                            reviewCards[i].style.opacity = '0';
+                            reviewCards[i].style.animation = 'fadeIn 0.5s ease forwards';
+                        }
+                    }
+                    
+                    currentlyVisible = nextBatch;
+                    updateLoadMoreButton();
+                }
+            });
+        });
+    </script>
+    <script src="/js/lazy-loading.js"></script>
+</body>
+</html>
+
